@@ -6,13 +6,6 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = Vector2.ZERO
 	
-	if Input.is_action_pressed("ui_right"):
-		velocity.x = SPEED
-	if Input.is_action_pressed("ui_left"):
-		velocity.x = -SPEED
-	if Input.is_action_pressed("ui_up"):
-		velocity.y = -SPEED
-	if Input.is_action_pressed("ui_down"):
-		velocity.y = SPEED
-
+	var input_vector = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	velocity = input_vector * SPEED
 	move_and_slide()
