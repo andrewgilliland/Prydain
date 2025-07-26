@@ -232,7 +232,7 @@ advance_expression = "input_vector.length() == 0.0"
 states/RunState/node = SubResource("AnimationNodeBlendSpace2D_ebec5")
 states/RunState/position = Vector2(401.305, 250.69)
 states/StandState/node = SubResource("AnimationNodeBlendSpace2D_yllr7")
-states/StandState/position = Vector2(400.5, 98.375)
+states/StandState/position = Vector2(400.902, 99.1875)
 transitions = ["Start", "StandState", SubResource("AnimationNodeStateMachineTransition_kb6p2"), "StandState", "RunState", SubResource("AnimationNodeStateMachineTransition_8t03j"), "RunState", "StandState", SubResource("AnimationNodeStateMachineTransition_2ieo8")]
 graph_offset = Vector2(-79.8301, 9.17995)
 
