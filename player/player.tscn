@@ -449,10 +449,10 @@ states/MoveState/position = Vector2(552.465, 101.795)
 states/RollState/node = SubResource("AnimationNodeBlendSpace2D_s7qer")
 states/RollState/position = Vector2(553.922, -22.8051)
 transitions = ["Start", "MoveState", SubResource("AnimationNodeStateMachineTransition_32hag"), "MoveState", "AttackState", SubResource("AnimationNodeStateMachineTransition_65viv"), "AttackState", "MoveState", SubResource("AnimationNodeStateMachineTransition_x7c3f"), "MoveState", "RollState", SubResource("AnimationNodeStateMachineTransition_g4c7l"), "RollState", "MoveState", SubResource("AnimationNodeStateMachineTransition_knn7v")]
-graph_offset = Vector2(280.507, -66.3051)
+graph_offset = Vector2(182.857, -39.2676)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_e7oew"]
-graph_offset = Vector2(-87.36, 46.08)
+graph_offset = Vector2(-70.08, 76.8)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_tqiix")
 nodes/StateMachine/position = Vector2(-20, 130)
 node_connections = [&"output", 0, &"StateMachine"]
@@ -478,3 +478,7 @@ parameters/StateMachine/AttackState/blend_position = Vector2(0.214201, 0.035821)
 parameters/StateMachine/MoveState/RunState/blend_position = Vector2(0.0230041, -0.433628)
 parameters/StateMachine/MoveState/StandState/blend_position = Vector2(-0.00405955, -0.132743)
 parameters/StateMachine/RollState/blend_position = Vector2(-0.113609, -0.498507)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+process_callback = 0
+position_smoothing_enabled = true

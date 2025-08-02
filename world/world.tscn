@@ -1,9 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://lwl6n8pbhlhq"]
+[gd_scene load_steps=4 format=3 uid="uid://lwl6n8pbhlhq"]
 
 [ext_resource type="Texture2D" uid="uid://i77jowydtjiq" path="res://world/bush.png" id="1_6xmxd"]
+[ext_resource type="Texture2D" uid="uid://3mbja1cppqwl" path="res://world/grass_background.png" id="1_4717r"]
 [ext_resource type="PackedScene" uid="uid://buiir6k8fh32y" path="res://player/player.tscn" id="2_tcf2h"]
 
 [node name="World" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="GrassBackground" type="TextureRect" parent="Parallax2D"]
+offset_right = 320.0
+offset_bottom = 192.0
+texture = ExtResource("1_4717r")
+stretch_mode = 1
 
 [node name="Bush" type="Sprite2D" parent="."]
 position = Vector2(186, 90)
@@ -11,5 +20,3 @@ texture = ExtResource("1_6xmxd")
 
 [node name="Player" parent="." instance=ExtResource("2_tcf2h")]
 position = Vector2(111, 108)
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
